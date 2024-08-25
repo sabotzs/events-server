@@ -10,4 +10,8 @@ import Fluent
 
 struct EventDTO: Content {
     var id: UUID?
+    var name: String
+    var place: String
+    var startTime: Date
+    var endTime: Date
 }

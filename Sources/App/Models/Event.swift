@@ -14,5 +14,43 @@ final class Event: Model, @unchecked Sendable {
     @ID
     var id: UUID?
 
+    @Field(key: FieldKeys.name)
+    var name: String
+
+    @Field(key: FieldKeys.place)
+    var place: String
+
+    @Field(key: FieldKeys.startTime)
+    var startTime: Date
+
+    @Field(key: FieldKeys.endTime)
+    var endTime: Date
+
     init() { }
+
+    init(
+        id: UUID? = nil,
+        name: String,
+        place: String,
+        startTime: Date,
+        endTime: Date
+    ) {
+        self.id = id
+        self.name = name
+        self.place = place
+        self.startTime = startTime
+        self.endTime = endTime
+    }
+}
+
+extension Event {
+    var dto: EventDTO {
+        EventDTO(
+            id: id,
+            name: name,
+            place: place,
+            startTime: startTime,
+            endTime: endTime
+        )
+    }
 }

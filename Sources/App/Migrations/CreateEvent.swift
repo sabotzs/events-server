@@ -15,6 +15,10 @@ struct CreateEvent: AsyncMigration {
     func prepare(on database: FluentKit.Database) async throws {
         try await database.schema(schema)
             .id()
+            .field(keys.name, .string)
+            .field(keys.place, .string)
+            .field(keys.startTime, .string)
+            .field(keys.endTime, .string)
             .create()
     }
 

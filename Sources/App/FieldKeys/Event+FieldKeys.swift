@@ -10,6 +10,9 @@ import Fluent
 
 extension Event {
     struct FieldKeys {
-
+        static var name: FieldKey { "name" }
+        static var place: FieldKey { "place" }
+        static var startTime: FieldKey { "startTime" }
+        static var endTime: FieldKey { "endTime" }
     }
 }
