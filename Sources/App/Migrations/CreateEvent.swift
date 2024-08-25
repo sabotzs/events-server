@@ -12,7 +12,7 @@ struct CreateEvent: AsyncMigration {
     let schema = Event.schema
     let keys = Event.FieldKeys.self
 
-    func prepare(on database: FluentKit.Database) async throws {
+    func prepare(on database: Database) async throws {
         try await database.schema(schema)
             .id()
             .field(keys.name, .string)
@@ -22,7 +22,7 @@ struct CreateEvent: AsyncMigration {
             .create()
     }
 
-    func revert(on database: FluentKit.Database) async throws {
+    func revert(on database: Database) async throws {
         try await database.schema(schema).delete()
     }
 }

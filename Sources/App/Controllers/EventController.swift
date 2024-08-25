@@ -9,7 +9,7 @@ import Vapor
 import Fluent
 
 struct EventController: RouteCollection {
-    func boot(routes: Vapor.RoutesBuilder) throws {
+    func boot(routes: RoutesBuilder) throws {
 
     }
 }
