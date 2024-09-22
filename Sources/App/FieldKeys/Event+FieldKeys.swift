@@ -12,7 +12,7 @@ extension Event {
     struct FieldKeys {
         static var name: FieldKey { "name" }
         static var place: FieldKey { "place" }
-        static var startTime: FieldKey { "startTime" }
-        static var endTime: FieldKey { "endTime" }
+        static var startTime: FieldKey { "start_time" }
+        static var endTime: FieldKey { "end_time" }
     }
 }

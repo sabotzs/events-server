@@ -17,8 +17,8 @@ struct CreateEvent: AsyncMigration {
             .id()
             .field(keys.name, .string)
             .field(keys.place, .string)
-            .field(keys.startTime, .string)
-            .field(keys.endTime, .string)
+            .field(keys.startTime, .datetime)
+            .field(keys.endTime, .datetime)
             .create()
     }
 
