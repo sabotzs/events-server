@@ -16,5 +16,7 @@ public func configure(_ app: Application) async throws {
 
     app.migrations.add(CreateEvent())
 
+    try await app.autoMigrate()
+
     try routes(app)
 }
